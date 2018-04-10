@@ -27,7 +27,7 @@ Then, simply call a server-side action from the parent's component controller li
 // Get server action service
 const server = component.find('server');
 // Get server-side action
-const anAction = component.get('c.anAction');
+const action = component.get('c.anAction');
 // Call server-side action with no parameters
 server.callServer(action);
 ```
@@ -35,7 +35,7 @@ server.callServer(action);
 Server-side actions can also be called with parameters, custom success and error handlers:
 ```js
 server.callServer(
-    anAction, // Server-side action
+    action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
     $A.getCallback(response => { // Custom success callback
