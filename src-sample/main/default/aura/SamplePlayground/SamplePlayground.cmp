@@ -1,4 +1,4 @@
-<aura:component access="global" implements="flexipage:availableForRecordHome" controller="SampleController">
+<aura:component access="global" implements="flexipage:availableForAllPageTypes" controller="SampleController">
     <!-- Add dependency to server side action service -->
     <c:ServerActionService aura:id="server"/>
 
