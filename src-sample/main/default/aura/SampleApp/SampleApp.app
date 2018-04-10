@@ -13,7 +13,7 @@
     </div>
 
     <div style="max-width: 850px; margin: 2rem auto;">
-        <c:SamplePlayground/>
+        <c:SampleServerAction/>
     </div>
     
 </aura:application>	

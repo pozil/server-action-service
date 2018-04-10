@@ -42,6 +42,12 @@
 				<td>false</td>
 				<td>Optional callback for handling server errors</td>
 			</tr>
+			<tr>
+				<td>disableErrorNotification</td>
+				<td>Boolean</td>
+				<td>false</td>
+				<td>Optional flag that allows to disable built-in error notifications. False by default.</td>
+			</tr>
 		</table>
 	</aura:description>
 </aura:documentation>

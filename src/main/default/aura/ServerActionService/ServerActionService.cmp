@@ -5,5 +5,6 @@
         <aura:attribute name="isStorable" type="Boolean" default="false" description="Whether the server-side action is storable (cached)"/>
         <aura:attribute name="successCallback" type="Function" description="Optional callback for handling successful server response"/>
         <aura:attribute name="errorCallback" type="Function" description="Optional callback for handling server errors"/>
+        <aura:attribute name="disableErrorNotification" type="Boolean" description="Optional flag that allows to disable built-in error notifications. False by default."/>
     </aura:method>
 </aura:component>
