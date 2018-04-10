@@ -1,0 +1,47 @@
+<aura:documentation>
+	<aura:description>
+		<p>This is a generic and reusable Lightning component that calls server-side actions.<br/>
+		This is a service component so it has no user interface of it's own: it is meant to be called by other components.</p>
+
+		<h4><code>callServer</code> method</h4>
+		<p>Calls a server-side action</p>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Required</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>action</td>
+				<td>Map</td>
+				<td>true</td>
+				<td>Server-side action that will be called.</td>
+			</tr>
+			<tr>
+				<td>params</td>
+				<td>Map</td>
+				<td>false</td>
+				<td>Optional parameters passed to the action. Set this to <code>null</code> if no parameters are required.</td>
+			</tr>
+			<tr>
+				<td>isStorable</td>
+				<td>Boolean</td>
+				<td>false</td>
+				<td>Whether the server-side action is storable (cached). Optional, false by default.</td>
+			</tr>
+			<tr>
+				<td>successCallback</td>
+				<td>Function</td>
+				<td>false</td>
+				<td>Optional callback for handling successful server response</td>
+			</tr>
+			<tr>
+				<td>errorCallback</td>
+				<td>Function</td>
+				<td>false</td>
+				<td>Optional callback for handling server errors</td>
+			</tr>
+		</table>
+	</aura:description>
+</aura:documentation>

@@ -1,0 +1,33 @@
+<aura:component access="global" implements="flexipage:availableForRecordHome" controller="SampleController">
+    <!-- Add dependency to server side action service -->
+    <c:ServerActionService aura:id="server"/>
+
+    <aura:attribute name="responseTypes" type="List" default="[
+        {'label': 'Success', 'value': 'success'},
+        {'label': 'Failure', 'value': 'failure'}
+    ]"/>
+    <aura:attribute name="responseType" type="String" default="success"/>
+    <aura:attribute name="response" type="String" default=""/>
+
+    <lightning:card title="Sample Server Action">
+        <div class="slds-p-horizontal_small">
+            <div class="slds-text-align_center slds-p-around_large">
+                <lightning:radioGroup name="responseTypes"
+                    label="Expected response"
+                    options="{!v.responseTypes}"
+                    value="{!v.responseType}"
+                    type="button"/>
+            </div>
+            <div class="slds-text-align_center slds-p-around_large">
+                <lightning:button label="Call server" variant="brand" onclick="{!c.onCallServer}"/>
+            </div>
+
+            <aura:if isTrue="{!!empty(v.response)}">
+                <div class="slds-text-align_center slds-p-around_large">
+                    <lightning:textarea name="response" readonly="true" value="{!v.response}" label="Server response" />
+                </div>
+            </aura:if>
+        </div>
+    </lightning:card>
+
+</aura:component>	
