@@ -16,6 +16,10 @@ The component is documented using Aura documentation.<br/>
 You can access it from this URL (replace the domain):<br/>
 https://<b>&lt;YOUR_DOMAIN&gt;</b>.lightning.force.com/auradocs/reference.app#reference?descriptor=c:ServerActionService&defType=component
 
+Here is an overview of how the service integrates with a calling component:
+
+<img src="gfx/architecture.jpg" align="center" alt="architecture"/>
+
 Use the service by adding the component to a parent component's markup:
 ```xml
 <!-- Add dependency to server side action service -->
