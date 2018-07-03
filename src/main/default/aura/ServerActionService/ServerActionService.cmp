@@ -1,5 +1,5 @@
 <aura:component access="global">
-    <aura:method name="callServer" action="{!c.callServer}" description="Calls a server-side action">
+    <aura:method access="global" name="callServer" action="{!c.callServer}" description="Calls a server-side action">
         <aura:attribute name="action" type="Map" required="true" description="Server-side action that will be called"/>
         <aura:attribute name="params" type="Map" description="Optional parameters passed to the action. Set this to null if no parameters are required."/>
         <aura:attribute name="isStorable" type="Boolean" default="false" description="Whether the server-side action is storable (cached)"/>
