@@ -15,5 +15,4 @@
     <div style="max-width: 850px; margin: 2rem auto;">
         <c:SampleServerAction/>
     </div>
-    
-</aura:application>	
+</aura:application>

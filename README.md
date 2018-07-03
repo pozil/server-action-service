@@ -60,6 +60,6 @@ Deploy the sample application with Salesforce DX by clicking on this button:
 
 ## Sample application
 The default installation installs the component and a sample application available under this URL (replace the domain):<br/>
-https://<b>&lt;YOUR_DOMAIN&gt;</b>.lightning.force.com/c/SampleApp.app
+https://<b>&lt;YOUR_DOMAIN&gt;</b>.lightning.force.com/c/SampleServerActionApp.app
 
 If you wish to install the project without the sample application, edit `sfdx-project.json` and remove the `src-sample` path.
