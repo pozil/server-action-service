@@ -11,6 +11,18 @@ The component provides the following features:
 - support for storable actions (cached)
 - custom success and error callbacks
 
+## Installation
+Deploy the component and the sample application with Salesforce DX by clicking on this button:
+
+[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com)
+
+**OR**
+
+Install just the service component without the sample app as a package by running this Salesforce DX command:
+```
+sfdx force:package:install --package 04t0X000000r7S1
+```
+
 ## Documentation
 The component is documented using Aura documentation.<br/>
 You can access it from this URL (replace the domain):<br/>
@@ -51,15 +63,8 @@ server.callServer(
 );
 ```
 
-
-## Salesforce DX setup instructions
-Deploy the sample application with Salesforce DX by clicking on this button:
-
-[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com)
-
-
 ## Sample application
-The default installation installs the component and a sample application available under this URL (replace the domain):<br/>
+The default installation (if you do not use the package) installs the component and a sample application available under this URL (replace the domain):<br/>
 https://<b>&lt;YOUR_DOMAIN&gt;</b>.lightning.force.com/c/SampleServerActionApp.app
 
-If you wish to install the project without the sample application, edit `sfdx-project.json` and remove the `src-sample` path.
+If you wish to install manually the project without the sample app, edit `sfdx-project.json` and remove the `src-sample` path.
