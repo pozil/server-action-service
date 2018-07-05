@@ -18,7 +18,7 @@ Deploy the component and the sample application with Salesforce DX by clicking o
 
 **OR**
 
-Install just the service component without the sample app as a package by running this Salesforce DX command:
+Install just the service component without the sample app as an unmanaged package by running this Salesforce DX command:
 ```
 sfdx force:package:install --package 04t0X000000r7S1
 ```
