@@ -12,16 +12,21 @@ The component provides the following features:
 - custom success and error callbacks
 
 ## Installation
-Deploy the component and the sample application with Salesforce DX by clicking on this button:
+
+**Option 1:** deploy the component and the sample application with Salesforce DX by clicking on this button:
 
 [![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com)
 
-**OR**
+**Option 2:** install just the service component without the sample app as an unmanaged package either by
 
-Install just the service component without the sample app as an unmanaged package by running this Salesforce DX command:
+**Option 2a:** running this Salesforce DX command:
 ```
 sfdx force:package:install --package 04t0X000000r7S1
 ```
+
+**Option 2b:** clicking this link:<br/>
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0X000000r7S1
+
 
 ## Documentation
 The component is documented using Aura documentation.<br/>
