@@ -1,1 +1,0 @@
-cp -f config/sfdx-project-$1.json sfdx-project.json

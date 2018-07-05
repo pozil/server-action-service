@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Get parameters
+# Set parameters
 ORG_ALIAS="sas-dev"
 
-# Install script
 echo ""
 echo "Installing Server Action Service (SAS):"
 echo "- Org alias:      $ORG_ALIAS"
 echo ""
 
-./set-config.sh dev && \
+# Install script
+./set-env.sh dev && \
 echo "Creating scratch org..." && \
 sfdx force:org:create -s -f config/project-scratch-def.json -a $ORG_ALIAS -d 30 && \
 echo "" && \
