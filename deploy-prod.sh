@@ -6,7 +6,7 @@ TEMP_DIR="mdapi"
 
 echo ""
 echo "Deploying Server Action Service (SAS) to production:"
-echo "- Org alias:      $ORG_ALIAS"
+echo "- Org alias:      $PROD_ORG_ALIAS"
 echo ""
 
 # Install script
