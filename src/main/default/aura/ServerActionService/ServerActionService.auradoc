@@ -1,53 +1,39 @@
 <aura:documentation>
 	<aura:description>
-		<p>This is a generic and reusable Lightning component that calls server-side actions.<br/>
+		<p>This is a generic and reusable Lightning component that calls server-side actions.
 		This is a service component so it has no user interface of it's own: it is meant to be called by other components.</p>
 
-		<h4><code>callServer</code> method</h4>
-		<p>Calls a server-side action</p>
-		<table>
-			<tr>
-				<th>Name</th>
-				<th>Type</th>
-				<th>Required</th>
-				<th>Description</th>
-			</tr>
-			<tr>
-				<td>action</td>
-				<td>Map</td>
-				<td>true</td>
-				<td>Server-side action that will be called.</td>
-			</tr>
-			<tr>
-				<td>params</td>
-				<td>Map</td>
-				<td>false</td>
-				<td>Optional parameters passed to the action. Set this to <code>null</code> if no parameters are required.</td>
-			</tr>
-			<tr>
-				<td>isStorable</td>
-				<td>Boolean</td>
-				<td>false</td>
-				<td>Whether the server-side action is storable (cached). Optional, false by default.</td>
-			</tr>
-			<tr>
-				<td>successCallback</td>
-				<td>Function</td>
-				<td>false</td>
-				<td>Optional callback for handling successful server response</td>
-			</tr>
-			<tr>
-				<td>errorCallback</td>
-				<td>Function</td>
-				<td>false</td>
-				<td>Optional callback for handling server errors</td>
-			</tr>
-			<tr>
-				<td>disableErrorNotification</td>
-				<td>Boolean</td>
-				<td>false</td>
-				<td>Optional flag that allows to disable built-in error notifications. False by default.</td>
-			</tr>
-		</table>
+		<p>Use the service by adding the component to a parent component's markup:</p>
+
+		<pre>&lt;c:ServerActionService aura:id="server"/&gt;</pre>
+
+<p>Then, simply call a server-side action from the parent's component controller like this:</p>
+
+<pre>
+// Get server action service
+const server = component.find('server');
+// Get server-side action
+const action = component.get('c.anAction');
+// Call server-side action with no parameters
+server.callServer(action);
+</pre>
+
+<p>Server-side actions can also be called with parameters, custom success and error handlers:</p>
+
+<pre>
+server.callServer(
+    action, // Server-side action
+    parameters, // Action parameters
+    false, // Disable cache
+    $A.getCallback(response => { // Custom success callback
+        // Handle response
+    }),
+    $A.getCallback(errors => { // Custom error callback
+        // Handle errors
+    })
+);
+</pre>
+
+
 	</aura:description>
 </aura:documentation>
