@@ -21,11 +21,11 @@ The component provides the following features:
 
 **Option 2a:** running this Salesforce DX command:
 ```
-sfdx force:package:install --package 04t0X000000r7aM
+sfdx force:package:install --package 04t1t000000UAIj
 ```
 
 **Option 2b:** clicking this link:<br/>
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0X000000r7aM
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000000UAIj
 
 
 ## Documentation
