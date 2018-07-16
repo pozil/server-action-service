@@ -64,7 +64,8 @@ server.callServer(
     }),
     $A.getCallback(errors => { // Custom error callback
         // Handle errors
-    })
+    }),
+    false // Disable built-in error notification
 );
 ```
 
