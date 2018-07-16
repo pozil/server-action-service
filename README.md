@@ -49,11 +49,11 @@ Then, simply call a server-side action from the parent's component controller li
 const server = component.find('server');
 // Get server-side action
 const action = component.get('c.anAction');
-// Call server-side action with no parameters
+// Call server-side action with no parameters and no callback
 server.callServer(action);
 ```
 
-Server-side actions can also be called with parameters, custom success and error handlers:
+Server-side actions can also be called with optional parameters, optional custom success and error handlers:
 ```js
 server.callServer(
     action, // Server-side action
