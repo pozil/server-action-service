@@ -28,8 +28,8 @@
                     if (typeof errors !== 'undefined' && Array.isArray(errors) && errors.length > 0) {
                         errors.forEach(error => {
                             // Check for 'regular' errors
-                            if (typeof error.message != 'undefined') {
-                                helper.displayError(error.message);
+                            if (typeof error.message !== 'undefined') {
+                                helper.displayError(error.message, params);
                                 isUnknownError = false;
                             }
                             // Check for 'pageError' errors
@@ -37,7 +37,7 @@
                             if (typeof pageErrors !== 'undefined' && Array.isArray(pageErrors) && pageErrors.length > 0) {
                                 pageErrors.forEach(pageError => {
                                     if (typeof pageError.message !== 'undefined') {
-                                        helper.displayError(pageError.message);
+                                        helper.displayError(pageError.message, params);
                                         isUnknownError = false;
                                     }
                                 });
@@ -46,7 +46,7 @@
                     }
                     // Make sure that we display at least one error message
                     if (isUnknownError) {
-                        helper.displayError('Unknown error');
+                        helper.displayError('Unknown error', params);
                     }
                     // Display raw error stack in console
                     console.error(JSON.stringify(errors));
