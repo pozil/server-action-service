@@ -1,3 +1,5 @@
 .THIS textarea {
     height: 100px;
 }
+
+.THIS .slds-checkbox_toggle .slds-form-element__label {width: 4rem;}
