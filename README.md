@@ -25,7 +25,7 @@ sfdx force:package:install --package 04t1t000000VqwD
 ```
 
 **Option 2b:** clicking this link:<br/>
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000000VqwD
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000000Vrbf
 
 
 ## Documentation
