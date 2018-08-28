@@ -64,6 +64,11 @@
             action.setStorable();
         }
 
+        // Set action to execute in background if applicable
+        if (params.isBackground) {
+            action.setBackground();
+        }
+
         // Call server-side action
         $A.enqueueAction(action);
     }

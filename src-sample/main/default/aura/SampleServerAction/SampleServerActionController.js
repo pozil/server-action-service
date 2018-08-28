@@ -11,6 +11,7 @@
         server.callServer(anAction, // Action
             {shouldFail: shouldFail}, // Action parameters
             false, // Disable cache
+            false, // Disable background
             $A.getCallback(response => { // Success callback
                 component.set('v.response', response);
             }),

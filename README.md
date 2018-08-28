@@ -59,6 +59,7 @@ server.callServer(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
+    false, // Disable background
     $A.getCallback(response => { // Custom success callback
         // Handle response
     }),
