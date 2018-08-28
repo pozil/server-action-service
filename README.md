@@ -65,7 +65,8 @@ server.callServer(
     $A.getCallback(errors => { // Custom error callback
         // Handle errors
     }),
-    false // Disable built-in error notification
+    false, // Disable built-in error notification
+    false // Disable background
 );
 ```
 
@@ -74,3 +75,5 @@ The default installation (if you do not use the package) installs the component 
 https://<b>&lt;YOUR_DOMAIN&gt;</b>.lightning.force.com/c/SampleServerActionApp.app
 
 If you wish to install manually the project without the sample app, edit `sfdx-project.json` and remove the `src-sample` path.
+
+<img src="gfx/sample-app-screenshot.png" align="center" alt="Sample app screenshot"/>
