@@ -66,7 +66,8 @@ server.callServer(
         // Handle errors
     }),
     false, // Disable built-in error notification
-    false // Disable background
+    false, // Disable background
+    false // not abortable
 );
 ```
 

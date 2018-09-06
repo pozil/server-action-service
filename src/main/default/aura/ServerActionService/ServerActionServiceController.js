@@ -69,6 +69,11 @@
             action.setBackground();
         }
 
+        // Set action to execute in background if applicable
+        if (params.isAbortable) {
+            action.setAbortable()();
+        }
+
         // Call server-side action
         $A.enqueueAction(action);
     }

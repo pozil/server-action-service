@@ -21,7 +21,8 @@
                 component.set('v.response', errors[0].message);
             }),
             false, // Keep built-in error handling
-            component.find('isBackground').get('v.checked') // Toggles background
+            component.find('isBackground').get('v.checked'), // Toggles background
+            component.find('isAbortable').get('v.checked') // Toggles background
         );
     }
 })
