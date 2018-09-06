@@ -9,7 +9,7 @@
             action.setParams(params.params);
         }
 
-        action.setCallback(this, function(response) {
+        action.setCallback(this, (response) => {
             const state = response.getState();
             if (state === "SUCCESS") {
                 // Call custom success callback if applicable
@@ -76,5 +76,41 @@
 
         // Call server-side action
         $A.enqueueAction(action);
+    },
+
+    callServerPromise : function(component, event, helper) {
+        return new Promise((resolve,reject) => {
+            const params = event.getParam('arguments');
+        
+            const action = params.action;
+            
+            // Pass action parameters if applicable
+            if (params.params !== null) {
+                action.setParams(params.params);
+            }
+
+            action.setCallback(this, (response) => {
+                if (response.getState() === "SUCCESS") {resolve(response.getReturnValue());}
+                else if (response.getState() === "ERROR") {reject(response.getError());}
+            });
+
+            // Set action as storable if applicable
+            if (params.isStorable) {
+                action.setStorable();
+            }
+
+            // Set action to execute in background if applicable
+            if (params.isBackground) {
+                action.setBackground();
+            }
+
+            // Set action to execute in background if applicable
+            if (params.isAbortable) {
+                action.setAbortable()();
+            }
+
+            // Call server-side action
+            $A.enqueueAction(action);
+        });
     }
 })
