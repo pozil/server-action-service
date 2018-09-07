@@ -59,15 +59,29 @@ server.callServer(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
+    false, // Disable background
+    false, // not abortable
+    false, // Disable built-in error notification
     $A.getCallback(response => { // Custom success callback
         // Handle response
     }),
     $A.getCallback(errors => { // Custom error callback
         // Handle errors
-    }),
-    false, // Disable built-in error notification
-    false // Disable background
+    })
 );
+```
+
+Server-side actions can also be called in Promise chain:
+```js
+server.callServerPromise(
+    action, // Server-side action
+    parameters, // Action parameters
+    false, // Disable cache
+    false, // Disable background
+    false, // not abortable
+    false, // Disable built-in error notification
+).then($A.getCallback(res => {console.log(res)}))
+.catch($A.getCallback(err=> {console.error(err)}));
 ```
 
 ## Sample application

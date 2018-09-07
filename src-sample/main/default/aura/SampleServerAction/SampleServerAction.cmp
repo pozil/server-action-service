@@ -19,6 +19,7 @@
                     type="button"/>
                 <lightning:input type="toggle" label="Storable" name="isStorable" aura:id="isStorable" class="slds-m-top_small"/>
                 <lightning:input type="toggle" label="Background" name="isBackground" aura:id="isBackground" class="slds-m-top_small"/>
+                <lightning:input type="toggle" label="Abortable" name="isAbortable" aura:id="isAbortable" class="slds-m-top_small"/>
             </div>
             <div class="slds-text-align_center slds-p-around_large">
                 <lightning:button label="Call server" variant="brand" onclick="{!c.onCallServer}"/>

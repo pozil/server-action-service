@@ -18,23 +18,41 @@ const action = component.get('c.anAction');
 server.callServer(action);
 </pre>
 
-<p>Server-side actions can also be called with parameters, custom success and error handlers:</p>
+<p>Server-side actions can be called with parameters, custom callbacks and other options:</p>
 
 <pre>
 server.callServer(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
-    false, // Disable background
     $A.getCallback(response => { // Custom success callback
         // Handle response
     }),
     $A.getCallback(errors => { // Custom error callback
         // Handle errors
-    })
+    }),
+    false, // Disable built-in error notification
+    false, // Disable background
+    false // Not abortable
 );
 </pre>
 
+<p>Alternatively, Server-side actions can be called as a JS promise:</p>
+<pre>
+server.callServerPromise(
+    action, // Server-side action
+    parameters, // Action parameters
+    false, // Disable cache
+    false, // Disable built-in error notification
+    false, // Disable background
+    false // Not abortable
+).then($A.getCallback(response => {
+    // Handle response
+}))
+.catch($A.getCallback(errors => {
+    // Handle errors
+}));
+</pre>
 
 	</aura:description>
 </aura:documentation>
