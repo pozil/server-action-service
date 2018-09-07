@@ -25,7 +25,7 @@ sfdx force:package:install --package 04t1t000000VqwD
 ```
 
 **Option 2b:** clicking this link:<br/>
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000000Vrbf
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000000XfCt
 
 
 ## Documentation
@@ -59,29 +59,33 @@ server.callServer(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
-    false, // Disable background
-    false, // not abortable
-    false, // Disable built-in error notification
     $A.getCallback(response => { // Custom success callback
         // Handle response
     }),
     $A.getCallback(errors => { // Custom error callback
         // Handle errors
-    })
+    }),
+    false, // Disable built-in error notification
+    false, // Disable background
+    false // Not abortable
 );
 ```
 
-Server-side actions can also be called in Promise chain:
+Server-side actions can also be called in a JS Promise chain:
 ```js
 server.callServerPromise(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
-    false, // Disable background
-    false, // not abortable
     false, // Disable built-in error notification
-).then($A.getCallback(res => {console.log(res)}))
-.catch($A.getCallback(err=> {console.error(err)}));
+    false, // Disable background
+    false // Not abortable
+).then($A.getCallback(response => {
+    // Handle response
+}))
+.catch($A.getCallback(errors => {
+    // Handle errors
+}));
 ```
 
 ## Sample application
