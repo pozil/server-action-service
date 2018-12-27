@@ -12,10 +12,10 @@
             anAction, // Action
             {shouldFail: shouldFail}, // Action parameters
             component.find('isStorable').get('v.checked'), // Toogles cache
-            $A.getCallback(response => { // Success callback
+            $A.getCallback(function(response) { // Success callback
                 component.set('v.response', response);
             }),
-            $A.getCallback(errors => { // Error callback
+            $A.getCallback(function(errors) { // Error callback
                 // In this example, we only display the first error message because we triggered the error ourself
                 // In all other use cases make sure to display ALL error message or leave the default error handling do it
                 component.set('v.response', errors[0].message);
@@ -25,7 +25,7 @@
             component.find('isAbortable').get('v.checked') // Toggles abortable
         );
 
-        // Or use a promise to call server-side action
+        // Or use a promise to call server-side action (Not supported in IE11)
         /*
         server.callServerPromise(
             anAction, // Action

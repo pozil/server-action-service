@@ -59,10 +59,10 @@ server.callServer(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
-    $A.getCallback(response => { // Custom success callback
+    $A.getCallback(function(response) { // Custom success callback
         // Handle response
     }),
-    $A.getCallback(errors => { // Custom error callback
+    $A.getCallback(function(errors) { // Custom error callback
         // Handle errors
     }),
     false, // Disable built-in error notification
@@ -71,7 +71,7 @@ server.callServer(
 );
 ```
 
-Server-side actions can also be called in a JS Promise chain:
+Server-side actions can also be called in a JS Promise chain (**Not supported in IE11**):
 ```js
 server.callServerPromise(
     action, // Server-side action

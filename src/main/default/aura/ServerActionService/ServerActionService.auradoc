@@ -25,10 +25,10 @@ server.callServer(
     action, // Server-side action
     parameters, // Action parameters
     false, // Disable cache
-    $A.getCallback(response => { // Custom success callback
+    $A.getCallback(function(response) { // Custom success callback
         // Handle response
     }),
-    $A.getCallback(errors => { // Custom error callback
+    $A.getCallback(function(errors) { // Custom error callback
         // Handle errors
     }),
     false, // Disable built-in error notification
@@ -37,7 +37,7 @@ server.callServer(
 );
 </pre>
 
-<p>Alternatively, Server-side actions can be called as a JS promise:</p>
+<p>Alternatively, Server-side actions can be called as a JS promise (Not supported in IE11):</p>
 <pre>
 server.callServerPromise(
     action, // Server-side action

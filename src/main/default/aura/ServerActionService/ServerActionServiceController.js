@@ -9,7 +9,7 @@
             action.setParams(params.params);
         }
 
-        action.setCallback(this, response => {
+        action.setCallback(this, function(response) {
             const state = response.getState();
             if (state === 'SUCCESS') {
                 // Call custom success callback if applicable
@@ -47,7 +47,8 @@
     },
 
     callServerPromise : function(component, event, helper) {
-        return new Promise((resolve,reject) => {
+        const that = this;
+        return new Promise(function(resolve,reject) {
             const params = event.getParam('arguments');
         
             const action = params.action;
@@ -57,7 +58,7 @@
                 action.setParams(params.params);
             }
 
-            action.setCallback(this, response => {
+            action.setCallback(that, function(response) {
                 const state = response.getState();
                 if (state === 'SUCCESS') {
                     resolve(response.getReturnValue());
