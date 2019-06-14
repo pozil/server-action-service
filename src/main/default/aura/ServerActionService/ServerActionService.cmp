@@ -2,20 +2,20 @@
     <aura:method access="global" name="callServer" action="{!c.callServer}" description="Calls a server-side action">
         <aura:attribute name="action" type="Map" required="true" description="Server-side action that will be called"/>
         <aura:attribute name="params" type="Map" description="Optional parameters passed to the action. Set this to null if no parameters are required."/>
-        <aura:attribute name="isStorable" type="Boolean" default="false" description="Optional flag that specifies whether the server-side action is storable (cached). False by default."/>
+        <aura:attribute name="isStorable" type="Boolean" description="Optional flag that specifies whether the server-side action is storable (cached). False by default."/>
         <aura:attribute name="successCallback" type="Function" description="Optional callback for handling successful server response"/>
         <aura:attribute name="errorCallback" type="Function" description="Optional callback for handling server errors"/>
         <aura:attribute name="disableErrorNotification" type="Boolean" description="Optional flag that allows to disable built-in error notifications. False by default."/>
-        <aura:attribute name="isBackground" type="Boolean" default="false" description="Optional flag that specifies whether the server-side action executes in background. False by default."/>
-        <aura:attribute name="isAbortable" type="Boolean" default="false" description="Optional flag that specifies whether the server-side action is abortable. False by default."/>
+        <aura:attribute name="isBackground" type="Boolean" description="Optional flag that specifies whether the server-side action executes in background. False by default."/>
+        <aura:attribute name="isAbortable" type="Boolean" description="Optional flag that specifies whether the server-side action is abortable. False by default."/>
     </aura:method>
 
     <aura:method access="global" name="callServerPromise" action="{!c.callServerPromise}" description="Calls a server-side action with a promise">
         <aura:attribute name="action" type="Map" required="true" description="Server-side action that will be called"/>
         <aura:attribute name="params" type="Map" description="Optional parameters passed to the action. Set this to null if no parameters are required."/>
-        <aura:attribute name="isStorable" type="Boolean" default="false" description="Optional flag that specifies whether the server-side action is storable (cached). False by default."/>
+        <aura:attribute name="isStorable" type="Boolean" description="Optional flag that specifies whether the server-side action is storable (cached). False by default."/>
         <aura:attribute name="disableErrorNotification" type="Boolean" description="Optional flag that allows to disable built-in error notifications. False by default."/>
-        <aura:attribute name="isBackground" type="Boolean" default="false" description="Optional flag that specifies whether the server-side action executes in background. False by default."/>
-        <aura:attribute name="isAbortable" type="Boolean" default="false" description="Optional flag that specifies whether the server-side action is abortable. False by default."/>
+        <aura:attribute name="isBackground" type="Boolean" description="Optional flag that specifies whether the server-side action executes in background. False by default."/>
+        <aura:attribute name="isAbortable" type="Boolean" description="Optional flag that specifies whether the server-side action is abortable. False by default."/>
     </aura:method>
 </aura:component>
