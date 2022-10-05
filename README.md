@@ -13,9 +13,7 @@ The component provides the following features:
 
 ## Installation
 
-**Option 1:** deploy the component and the sample application with Salesforce DX by clicking on this button:
-
-[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com)
+**Option 1:** deploy the component and the sample application with the Salesforce CLI.
 
 **Option 2:** install just the service component without the sample app as an unmanaged package either by
 
